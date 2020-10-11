@@ -1,0 +1,22 @@
+{
+  "name": "apollo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.2.3",
+    "@nexus/schema": "^0.16.0",
+    "apollo-server-micro": "^2.18.2",
+    "next": "9.5.5",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.52",
+    "typescript": "^4.0.3"
+  }
+}
