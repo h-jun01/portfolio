@@ -6,15 +6,15 @@ import path from "path";
 export const schema = makeSchema({
   types,
   outputs: {
-    schema: path.join(process.cwd(), "schema.graphql"),
+    schema: path.join(process.cwd(), "src", "schema.graphql"),
     typegen: path.join(process.cwd(), "src", "generated", "nexus.ts"),
   },
   typegenAutoConfig: {
     sources: [
       {
         alias: "faces",
-        source: path.join(process.cwd(), "src", "interface.ts"),
-        typeMatch: (type) => new RegExp(`(${type}Interface)`),
+        source: path.join(process.cwd(), "src", "type.ts"),
+        typeMatch: (type) => new RegExp(`(${type})`),
       },
     ],
     backingTypeMap: {

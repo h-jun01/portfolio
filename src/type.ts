@@ -1,18 +1,18 @@
-export interface ProfileInterface {
+export type Profile = {
   japaneseName: string;
   englishName: string;
   github: string;
   selfIntroduction: string;
-}
+};
 
-export interface WorksInterface {
+export type Works = {
   title: string;
   langs: string[];
   links: string[];
   date: string;
   content: string;
-}
+};
 
-export interface SkillsInterface {
+export type Skills = {
   lang: string;
-}
+};

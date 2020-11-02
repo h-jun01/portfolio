@@ -11,7 +11,12 @@ type Profile {
 
 type Query {
   profile: Profile
+  skills: [Skills]
   works: [Works]
+}
+
+type Skills {
+  lang: String
 }
 
 """

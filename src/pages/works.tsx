@@ -1,39 +1,45 @@
 import { useQuery, gql } from "@apollo/client";
 import { initializeApollo } from "src/apollo";
+import { Works } from "src/type";
 
-const ResumeQuery = gql`
+const query = gql`
   query {
-    profile {
-      github
-    }
     works {
+      title
       langs
+      links
+      date
+      content
     }
   }
 `;
 
-export default function Home() {
-  const { data, loading } = useQuery(ResumeQuery);
+const Works: React.FC = () => {
+  const { data, loading } = useQuery(query);
+  const { works } = data;
 
   if (loading) return <span>loading...</span>;
 
-  // const { profile, works } = data;
   return (
     <div>
       <pre>{JSON.stringify(data, null, 2)}</pre>
-      {/* <div>
-        <h1>{profile.japaneseName}</h1>
-        <h1>{works[0].title}</h1>
-      </div> */}
+      {works.map((work: Works, index: number) => (
+        <div key={index}>
+          <h1>{work.title}</h1>
+          {work.langs.map((lang, index) => (
+            <p key={index}>{lang}</p>
+          ))}
+        </div>
+      ))}
     </div>
   );
-}
+};
 
 export const getStaticProps = async () => {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({
-    query: ResumeQuery,
+    query: query,
   });
 
   return {
@@ -42,3 +48,5 @@ export const getStaticProps = async () => {
     },
   };
 };
+
+export default Works;

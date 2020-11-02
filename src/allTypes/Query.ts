@@ -1,6 +1,6 @@
 import { queryType } from "@nexus/schema";
 import { data } from "src/data";
-import { Profile, Works } from "./index";
+import { Profile, Works, Skills } from "./index";
 
 export const Query = queryType({
   definition(t) {
@@ -11,6 +11,10 @@ export const Query = queryType({
     t.list.field("works", {
       type: Works,
       resolve: () => data.works,
+    });
+    t.list.field("skills", {
+      type: Skills,
+      resolve: () => data.skills,
     });
   },
 });

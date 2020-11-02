@@ -3,7 +3,7 @@
  * Do not make changes to this file directly
  */
 
-import * as faces from "../interface"
+import * as faces from "../type"
 import { core } from "@nexus/schema"
 declare global {
   interface NexusGenCustomInputMethods<TypeName extends string> {
@@ -37,9 +37,10 @@ export interface NexusGenScalars {
 }
 
 export interface NexusGenRootTypes {
-  Profile: faces.ProfileInterface;
+  Profile: faces.Profile;
   Query: {};
-  Works: faces.WorksInterface;
+  Skills: faces.Skills;
+  Works: faces.Works;
 }
 
 export interface NexusGenAllTypes extends NexusGenRootTypes {
@@ -60,7 +61,11 @@ export interface NexusGenFieldTypes {
   }
   Query: { // field return type
     profile: NexusGenRootTypes['Profile'] | null; // Profile
+    skills: Array<NexusGenRootTypes['Skills'] | null> | null; // [Skills]
     works: Array<NexusGenRootTypes['Works'] | null> | null; // [Works]
+  }
+  Skills: { // field return type
+    lang: string | null; // String
   }
   Works: { // field return type
     content: string | null; // String
@@ -79,7 +84,7 @@ export interface NexusGenAbstractResolveReturnTypes {
 
 export interface NexusGenInheritedFields {}
 
-export type NexusGenObjectNames = "Profile" | "Query" | "Works";
+export type NexusGenObjectNames = "Profile" | "Query" | "Skills" | "Works";
 
 export type NexusGenInputNames = never;
 
