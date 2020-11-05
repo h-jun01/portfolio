@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@apollo/client": "^3.2.3",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@nexus/schema": "^0.16.0",
     "apollo-server-micro": "^2.18.2",
     "date-fns": "^2.16.1",
@@ -17,7 +19,8 @@
     "micro": "^9.3.4",
     "next": "^10.0.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "sass": "^1.28.0"
   },
   "devDependencies": {
     "@types/react": "^16.9.52",

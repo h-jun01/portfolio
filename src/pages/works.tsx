@@ -1,6 +1,6 @@
 import { useQuery, gql } from "@apollo/client";
 import { initializeApollo } from "src/apollo";
-import { Works } from "src/type";
+import { NextPage, GetStaticProps } from "next";
 
 const query = gql`
   query {
@@ -14,7 +14,7 @@ const query = gql`
   }
 `;
 
-const Works: React.FC = () => {
+const Page: NextPage = () => {
   const { data, loading } = useQuery(query);
   const { works } = data;
 
@@ -23,7 +23,7 @@ const Works: React.FC = () => {
   return (
     <div>
       <pre>{JSON.stringify(data, null, 2)}</pre>
-      {works.map((work: Works, index: number) => (
+      {works.map((work, index: number) => (
         <div key={index}>
           <h1>{work.title}</h1>
           {work.langs.map((lang, index) => (
@@ -35,7 +35,7 @@ const Works: React.FC = () => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({
@@ -49,4 +49,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default Works;
+export default Page;

@@ -1,5 +1,6 @@
-import { useQuery, gql } from "@apollo/client";
+import { useQuery, gql, NormalizedCacheObject } from "@apollo/client";
 import { initializeApollo } from "src/apollo";
+import { NextPage, GetStaticProps } from "next";
 
 const query = gql`
   query {
@@ -11,12 +12,12 @@ const query = gql`
   }
 `;
 
-const Profile = () => {
+const Page: NextPage = () => {
   const { data, loading } = useQuery(query);
+  const { profile } = data;
 
   if (loading) return <span>loading...</span>;
 
-  const { profile } = data;
   return (
     <div>
       <pre>{JSON.stringify(data, null, 2)}</pre>
@@ -29,7 +30,7 @@ const Profile = () => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({
@@ -43,4 +44,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default Profile;
+export default Page;
