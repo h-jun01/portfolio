@@ -2,7 +2,6 @@ import { ApolloProvider, useApolloClient } from "@apollo/client";
 import { useApollo } from "src/apollo";
 import { AppProps } from "next/app";
 import { SiteHeader } from "src/components/SiteHeader";
-import { TabMenu } from "src/components/TabMenu";
 import "src/styles/globals.scss";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
@@ -10,7 +9,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   return (
     <ApolloProvider client={client}>
-      <TabMenu />
       <Component {...pageProps} />
     </ApolloProvider>
   );
