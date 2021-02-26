@@ -1,8 +1,9 @@
-import { useQuery, gql } from "@apollo/client";
+import { useQuery, gql, DocumentNode } from "@apollo/client";
 import { initializeApollo } from "src/apollo";
 import { NextPage, GetStaticProps } from "next";
+import { Skills } from "src/type";
 
-const query = gql`
+const query: DocumentNode = gql`
   query {
     skills {
       lang
@@ -12,15 +13,15 @@ const query = gql`
 
 const Page: NextPage = () => {
   const { data, loading } = useQuery(query);
+  const { skills } = data;
 
   if (loading) return <span>loading...</span>;
 
-  const { skills } = data;
   return (
     <div>
       <pre>{JSON.stringify(data, null, 2)}</pre>
-      {skills.map((skill) => (
-        <p>{skill.lang}</p>
+      {skills.map((skill: Skills, index: number) => (
+        <p key={index}>{skill.lang}</p>
       ))}
     </div>
   );

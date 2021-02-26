@@ -5,7 +5,7 @@ export const Works = objectType({
   definition(t) {
     t.string("title");
     t.list.string("langs");
-    t.list.string("links");
+    t.string("link");
     t.string("date");
     t.string("content");
   },

@@ -28,6 +28,6 @@ type Works {
   content: String
   date: String
   langs: [String]
-  links: [String]
+  link: String
   title: String
 }

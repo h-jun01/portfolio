@@ -8,7 +8,7 @@ export type Profile = {
 export type Works = {
   title: string;
   langs: string[];
-  links: string[];
+  link: string;
   date: string;
   content: string;
 };

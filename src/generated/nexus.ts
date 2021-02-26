@@ -71,7 +71,7 @@ export interface NexusGenFieldTypes {
     content: string | null; // String
     date: string | null; // String
     langs: Array<string | null> | null; // [String]
-    links: Array<string | null> | null; // [String]
+    link: string | null; // String
     title: string | null; // String
   }
 }
