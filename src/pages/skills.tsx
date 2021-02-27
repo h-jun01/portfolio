@@ -1,4 +1,10 @@
-import { useQuery, gql, DocumentNode } from "@apollo/client";
+import {
+  useQuery,
+  gql,
+  DocumentNode,
+  ApolloClient,
+  NormalizedCacheObject,
+} from "@apollo/client";
 import { initializeApollo } from "src/apollo";
 import { NextPage, GetStaticProps } from "next";
 import { Skills } from "src/type";
@@ -28,7 +34,7 @@ const Page: NextPage = () => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const apolloClient = initializeApollo();
+  const apolloClient: ApolloClient<NormalizedCacheObject> = initializeApollo();
 
   await apolloClient.query({
     query: query,

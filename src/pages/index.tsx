@@ -1,9 +1,15 @@
-import { useQuery, gql, NormalizedCacheObject } from "@apollo/client";
+import {
+  useQuery,
+  gql,
+  DocumentNode,
+  ApolloClient,
+  NormalizedCacheObject,
+} from "@apollo/client";
 import { initializeApollo } from "src/apollo";
 import { NextPage, GetStaticProps } from "next";
-import Head from "next/head";
+import { PageSEO } from "src/components/PageSEO";
 
-const query = gql`
+const query: DocumentNode = gql`
   query {
     profile {
       japaneseName
@@ -21,9 +27,11 @@ const Page: NextPage = () => {
 
   return (
     <div>
-      <Head>
-        <title>JunHashimoto | Profile</title>
-      </Head>
+      <PageSEO
+        title="JunHashimoto | Profile"
+        path="/"
+        removeSiteNameFromTitle={true}
+      />
       <pre>{JSON.stringify(data, null, 2)}</pre>
       <div>
         <h1>{profile.japaneseName}</h1>
@@ -35,7 +43,7 @@ const Page: NextPage = () => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const apolloClient = initializeApollo();
+  const apolloClient: ApolloClient<NormalizedCacheObject> = initializeApollo();
 
   await apolloClient.query({
     query: query,

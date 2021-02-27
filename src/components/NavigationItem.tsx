@@ -8,8 +8,10 @@ type Props = {
   menuName: "🧑🏻‍💻 Profile" | "📙 Works" | "💻 Skills" | "📨 Contact";
 };
 
-export const NavigationItem: FC<Props> = ({ pathName, menuName }) => {
+export const NavigationItem: FC<Props> = (props) => {
+  const { pathName, menuName } = props;
   const router: NextRouter = useRouter();
+
   return (
     <NavigationItemList isActive={router.pathname === pathName}>
       <Link href={pathName} passHref>

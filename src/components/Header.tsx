@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { ContentWrapper } from "src/components/ContentWrapper";
 import { NavigationItem } from "src/components/NavigationItem";
+import { config } from "@site.config";
 import styled from "styled-components";
 
 export const SiteHeader: FC = () => {
@@ -14,8 +15,8 @@ export const SiteHeader: FC = () => {
           </HeaderUserImageContainer>
           <HeaderNavigationContainer>
             <HeaderProfile>
-              <h1>Jun Hashimoto</h1>
-              <p>Web Developer</p>
+              <h1>{config.headerItems.name}</h1>
+              <p>{config.headerItems.job}</p>
             </HeaderProfile>
             <HeaderNavigation>
               <ul>

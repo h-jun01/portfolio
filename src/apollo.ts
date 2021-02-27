@@ -20,7 +20,7 @@ const createIsomorphicLink = () => {
   }
 };
 
-const createApolloClient = () => {
+const createApolloClient = (): ApolloClient<NormalizedCacheObject> => {
   return new ApolloClient({
     ssrMode: typeof window === "undefined",
     link: createIsomorphicLink(),
@@ -29,7 +29,8 @@ const createApolloClient = () => {
 };
 
 export const initializeApollo = (initialState = null) => {
-  const _apolloClient = apolloClient ?? createApolloClient();
+  const _apolloClient: ApolloClient<NormalizedCacheObject> =
+    apolloClient ?? createApolloClient();
 
   if (initialState) {
     _apolloClient.cache.restore(initialState);
@@ -42,6 +43,9 @@ export const initializeApollo = (initialState = null) => {
 };
 
 export const useApollo = (initialState) => {
-  const store = useMemo(() => initializeApollo(initialState), [initialState]);
+  const store: ApolloClient<NormalizedCacheObject> = useMemo(
+    () => initializeApollo(initialState),
+    [initialState]
+  );
   return store;
 };
