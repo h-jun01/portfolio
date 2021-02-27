@@ -1,6 +1,7 @@
 import { useQuery, gql, NormalizedCacheObject } from "@apollo/client";
 import { initializeApollo } from "src/apollo";
 import { NextPage, GetStaticProps } from "next";
+import Head from "next/head";
 
 const query = gql`
   query {
@@ -20,6 +21,9 @@ const Page: NextPage = () => {
 
   return (
     <div>
+      <Head>
+        <title>JunHashimoto | Profile</title>
+      </Head>
       <pre>{JSON.stringify(data, null, 2)}</pre>
       <div>
         <h1>{profile.japaneseName}</h1>

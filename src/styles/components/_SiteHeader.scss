@@ -8,7 +8,7 @@
 .site-header__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 // .site-header__logo-link {
 //   display: flex;
@@ -27,18 +27,19 @@
 //   font-size: 0.95rem;
 // }
 .active {
-  color: "#ff0000";
-  background-color: #48453d;
-  transition: all 1s;
+  // color: "#ff0000";
+  // background-color: #48453d;
+  // transition: all 1s;
+  border-bottom: 2px solid #f8826c;
 }
 
-.p,
-.s,
-.w,
-.c {
-  background-color: #b4af9a;
-  transition: all 1s;
-}
+// .p,
+// .s,
+// .w,
+// .c {
+//   background-color: #b4af9a;
+//   transition: all 1s;
+// }
 
 .hoge1 {
   position: absolute;
@@ -50,4 +51,101 @@
   position: absolute;
   bottom: 70px;
   left: 0;
+}
+
+// ここから
+
+.site-header__inners {
+  width: 100%;
+  position: relative;
+}
+
+.site-header__header-image {
+  background-color: #242a2f;
+  // background: url(../../../public/images/003.jpg);
+  height: 190px;
+  width: 100vw;
+}
+
+.site-header__user-image {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  // background-color: #808080;
+  height: 120px;
+  width: 120px;
+  // border-radius: 60px;
+  // border: 4px solid #fff;
+}
+
+.site-header__user-image img {
+  border-radius: 60px;
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  border-radius: 60px;
+  border: 5px solid #fff;
+}
+
+.site-header__a {
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.naa {
+  display: flex;
+  justify-content: space-between;
+  width: 410px;
+}
+
+.naa li {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+  letter-spacing: 0.05rem;
+  color: #242a2f;
+}
+
+.p a,
+.w a,
+.s a,
+.c a {
+  display: block;
+}
+
+.p,
+.w,
+.s,
+.c {
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.1s;
+}
+
+.p:hover,
+.w:hover,
+.s:hover,
+.c:hover {
+  border-bottom: 2px solid #d1d5da;
+}
+
+.onamae {
+  // margin-left: 24px;
+  // text-align: center;
+}
+
+.jun {
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 0.05rem;
+  color: #242a2f;
+}
+
+.junen {
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.05rem;
+  color: #999999;
 }

@@ -1,92 +1,57 @@
-import Link from "next/link";
-// import { config } from "@site.config";
-
+import { FC } from "react";
+import styled from "styled-components";
 import { ContentWrapper } from "src/components/ContentWrapper";
-import { useRouter } from "next/router";
+import { NavigationItem } from "src/components/NavigationItem";
 
-// export const SiteHeader: React.FC = () => {
-//   const router = useRouter();
-//   return (
-//     <header className="site-header">
-//       <ContentWrapper>
-//         <div className="site-header__inner">
-//           <div className={router.pathname == "/" ? "active" : ""}>
-//             <Link href="/works" passHref>
-//               <a className="site-header__logo-link">
-//                 {/* <img
-//                 src="/logo.svg"
-//                 // alt={config.siteMeta.title}
-//                 className="site-header__logo-img"
-//               /> */}
-//                 works
-//               </a>
-//             </Link>
-//           </div>
-//           <Link href="/" passHref>
-//             <a className="site-header__logo-link">
-//               {/* <img
-//               src="/logo.svg"
-//               // alt={config.siteMeta.title}
-//               className="site-header__logo-img"
-//             /> */}
-//               home
-//             </a>
-//           </Link>
-//           <div className="site-header__links">
-//             {/* {config.headerLinks.map((link, i) => {
-//             const key = `header-link-${i}`;
-//             if (link.href.startsWith("/")) {
-//               return (
-//                 <Link key={key} href={link.href} passHref>
-//                   <a className="site-header__link">{link.title}</a>
-//                 </Link>
-//               );
-//             }
-//             return (
-//               <a key={key} href={link.href} className="site-header__link">
-//                 {link.title}
-//               </a>
-//             );
-//           })} */}
-//           </div>
-//         </div>
-//       </ContentWrapper>
-//     </header>
-//   );
-// };
-
-export const SiteHeader: React.FC = () => {
-  const router = useRouter();
+export const SiteHeader: FC = () => {
   return (
     <header className="site-header">
+      <div className="site-header__header-image"></div>
       <ContentWrapper>
-        <div className="site-header__inner">
-          <h1>Jun Hashimoto</h1>
-          <div className={router.pathname == "/" ? "active" : "p"}>
-            <Link href="/" passHref>
-              <a className="site-header__logo-link">profile</a>
-            </Link>
+        <div className="site-header__inners">
+          <div className="site-header__user-image">
+            <img src="./images/icon.png" alt="a" />
           </div>
-          <div className={router.pathname == "/works" ? "active" : "w"}>
-            <Link href="/works" passHref>
-              <a className="site-header__logo-link">works</a>
-            </Link>
-          </div>
-          <div className={router.pathname == "/skills" ? "active" : "s"}>
-            <Link href="/skills" passHref>
-              <a className="site-header__logo-links">skills</a>
-            </Link>
-          </div>
-          <div className={router.pathname == "/contact" ? "active" : "c"}>
-            <Link href="/contact" passHref>
-              <a className="site-header__logo-links">contact</a>
-            </Link>
+          <div className="site-header__a">
+            <SiteHeaderProfile>
+              <h1>Jun Hashimoto</h1>
+              <p>Web Developer</p>
+            </SiteHeaderProfile>
+            <SiteHeaderNavigation>
+              <ul>
+                <NavigationItem pathName="/" menuName="🧑🏻‍💻 Profile" />
+                <NavigationItem pathName="/works" menuName="📙 Works" />
+                <NavigationItem pathName="/skills" menuName="💻 Skills" />
+                <NavigationItem pathName="/contact" menuName="📨 Contact" />
+              </ul>
+            </SiteHeaderNavigation>
           </div>
         </div>
       </ContentWrapper>
-      <p className="hoge1">
-        <img src="./images/border.png" alt="a" />
-      </p>
     </header>
   );
 };
+
+const SiteHeaderNavigation = styled.nav`
+  > ul {
+    display: flex;
+    justify-content: space-between;
+    width: 420px;
+  }
+`;
+
+const SiteHeaderProfile = styled.div`
+  > h1 {
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 0.05rem;
+    color: #242a2f;
+  }
+
+  > p {
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.05rem;
+    color: #999999;
+  }
+`;
