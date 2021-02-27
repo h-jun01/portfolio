@@ -6,44 +6,44 @@ import styled from "styled-components";
 export const SiteHeader: FC = () => {
   return (
     <header>
-      <SiteHeaderBackground />
+      <HeaderBackground />
       <ContentWrapper>
-        <SiteHeaderContainer>
-          <SiteHeaderUserImageContainer>
-            <SiteHeaderUserImage src="./images/icon.png" alt="icon" />
-          </SiteHeaderUserImageContainer>
-          <SiteHeaderNavigationContainer>
-            <SiteHeaderProfile>
+        <HeaderContainer>
+          <HeaderUserImageContainer>
+            <HeaderUserImage src="./images/icon.png" alt="icon" />
+          </HeaderUserImageContainer>
+          <HeaderNavigationContainer>
+            <HeaderProfile>
               <h1>Jun Hashimoto</h1>
               <p>Web Developer</p>
-            </SiteHeaderProfile>
-            <SiteHeaderNavigation>
+            </HeaderProfile>
+            <HeaderNavigation>
               <ul>
                 <NavigationItem pathName="/" menuName="🧑🏻‍💻 Profile" />
                 <NavigationItem pathName="/works" menuName="📙 Works" />
                 <NavigationItem pathName="/skills" menuName="💻 Skills" />
                 <NavigationItem pathName="/contact" menuName="📨 Contact" />
               </ul>
-            </SiteHeaderNavigation>
-          </SiteHeaderNavigationContainer>
-        </SiteHeaderContainer>
+            </HeaderNavigation>
+          </HeaderNavigationContainer>
+        </HeaderContainer>
       </ContentWrapper>
     </header>
   );
 };
 
-const SiteHeaderBackground = styled.div`
+const HeaderBackground = styled.div`
   height: 190px;
   width: 100vw;
   background-color: #242a2f;
 `;
 
-const SiteHeaderContainer = styled.div`
+const HeaderContainer = styled.div`
   position: relative;
   width: 100%;
 `;
 
-const SiteHeaderUserImageContainer = styled.div`
+const HeaderUserImageContainer = styled.div`
   position: absolute;
   top: -60px;
   left: 0;
@@ -51,7 +51,7 @@ const SiteHeaderUserImageContainer = styled.div`
   width: 120px;
 `;
 
-const SiteHeaderUserImage = styled.img`
+const HeaderUserImage = styled.img`
   height: 120px;
   width: 120px;
   border: 5px solid #fff;
@@ -59,14 +59,14 @@ const SiteHeaderUserImage = styled.img`
   object-fit: cover;
 `;
 
-const SiteHeaderNavigationContainer = styled.div`
+const HeaderNavigationContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 60px;
 `;
 
-const SiteHeaderProfile = styled.div`
+const HeaderProfile = styled.div`
   > h1 {
     font-weight: bold;
     font-size: 25px;
@@ -82,7 +82,7 @@ const SiteHeaderProfile = styled.div`
   }
 `;
 
-const SiteHeaderNavigation = styled.nav`
+const HeaderNavigation = styled.nav`
   > ul {
     display: flex;
     justify-content: space-between;

@@ -2,8 +2,9 @@ import { NextPage } from "next";
 import { ApolloProvider } from "@apollo/client";
 import { useApollo } from "src/apollo";
 import { AppProps } from "next/app";
-import { SiteHeader } from "src/components/SiteHeader";
-import { SiteFooter } from "src/components/SiteFooter";
+import { GlobalStyle } from "src/styles/globalStyle";
+import { SiteHeader } from "src/components/Header";
+import { Footer } from "src/components/Footer";
 import "src/styles/globals.scss";
 
 const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
@@ -11,9 +12,10 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
 
   return (
     <ApolloProvider client={client}>
+      <GlobalStyle />
       <SiteHeader />
       <Component {...pageProps} />
-      <SiteFooter />
+      <Footer />
     </ApolloProvider>
   );
 };

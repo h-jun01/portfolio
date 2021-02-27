@@ -1,6 +1,6 @@
 import { ContentWrapper } from "src/components/ContentWrapper";
 
-export const SiteFooter: React.FC = () => {
+export const Footer: React.FC = () => {
   return (
     <header className="site-header">
       {/* <p className="hoge2">
