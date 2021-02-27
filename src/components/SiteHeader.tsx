@@ -1,18 +1,18 @@
 import { FC } from "react";
-import styled from "styled-components";
 import { ContentWrapper } from "src/components/ContentWrapper";
 import { NavigationItem } from "src/components/NavigationItem";
+import styled from "styled-components";
 
 export const SiteHeader: FC = () => {
   return (
-    <header className="site-header">
-      <div className="site-header__header-image"></div>
+    <header>
+      <SiteHeaderBackground />
       <ContentWrapper>
-        <div className="site-header__inners">
-          <div className="site-header__user-image">
-            <img src="./images/icon.png" alt="a" />
-          </div>
-          <div className="site-header__a">
+        <SiteHeaderContainer>
+          <SiteHeaderUserImageContainer>
+            <SiteHeaderUserImage src="./images/icon.png" alt="icon" />
+          </SiteHeaderUserImageContainer>
+          <SiteHeaderNavigationContainer>
             <SiteHeaderProfile>
               <h1>Jun Hashimoto</h1>
               <p>Web Developer</p>
@@ -25,33 +25,67 @@ export const SiteHeader: FC = () => {
                 <NavigationItem pathName="/contact" menuName="📨 Contact" />
               </ul>
             </SiteHeaderNavigation>
-          </div>
-        </div>
+          </SiteHeaderNavigationContainer>
+        </SiteHeaderContainer>
       </ContentWrapper>
     </header>
   );
 };
 
-const SiteHeaderNavigation = styled.nav`
-  > ul {
-    display: flex;
-    justify-content: space-between;
-    width: 420px;
-  }
+const SiteHeaderBackground = styled.div`
+  height: 190px;
+  width: 100vw;
+  background-color: #242a2f;
+`;
+
+const SiteHeaderContainer = styled.div`
+  position: relative;
+  width: 100%;
+`;
+
+const SiteHeaderUserImageContainer = styled.div`
+  position: absolute;
+  top: -60px;
+  left: 0;
+  height: 120px;
+  width: 120px;
+`;
+
+const SiteHeaderUserImage = styled.img`
+  height: 120px;
+  width: 120px;
+  border: 5px solid #fff;
+  border-radius: 60px;
+  object-fit: cover;
+`;
+
+const SiteHeaderNavigationContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
 `;
 
 const SiteHeaderProfile = styled.div`
   > h1 {
     font-weight: bold;
     font-size: 25px;
-    letter-spacing: 0.05rem;
     color: #242a2f;
+    letter-spacing: 0.05rem;
   }
 
   > p {
     font-weight: bold;
     font-size: 14px;
-    letter-spacing: 0.05rem;
     color: #999999;
+    letter-spacing: 0.05rem;
+  }
+`;
+
+const SiteHeaderNavigation = styled.nav`
+  > ul {
+    display: flex;
+    justify-content: space-between;
+    width: 420px;
   }
 `;
