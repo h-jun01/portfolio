@@ -69,17 +69,13 @@ const HeaderNavigationContainer = styled.div`
 
 const HeaderProfile = styled.div`
   > h1 {
-    font-weight: bold;
-    font-size: 25px;
-    color: #242a2f;
-    letter-spacing: 0.05rem;
+    font-size: ${({ theme }) => theme.fontSizes.xlarge};
   }
 
   > p {
     font-weight: bold;
-    font-size: 14px;
+    font-size: ${({ theme }) => theme.fontSizes.small};
     color: #999999;
-    letter-spacing: 0.05rem;
   }
 `;
 

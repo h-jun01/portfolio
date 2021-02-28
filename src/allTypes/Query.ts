@@ -1,8 +1,9 @@
 import { queryType } from "@nexus/schema";
+import { NexusObjectTypeDef } from "@nexus/schema/dist/core";
 import { data } from "src/data";
 import { Profile, Works, Skills } from "./index";
 
-export const Query = queryType({
+export const Query: NexusObjectTypeDef<"Query"> = queryType({
   definition(t) {
     t.field("profile", {
       type: Profile,

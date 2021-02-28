@@ -25,21 +25,20 @@ const NavigationItemList = styled.li<{ isActive: boolean }>`
   ${({ isActive }) =>
     isActive
       ? css`
-          border-bottom: 2px solid #f8826c;
+          border-bottom: 2px solid ${({ theme }) => theme.colors.activeBorder};
         `
       : css`
           border-bottom: 2px solid transparent;
           transition: border-bottom 0.1s;
           &:hover {
-            border-bottom: 2px solid #d1d5da;
+            border-bottom: 2px solid
+              ${({ theme }) => theme.colors.inactiveBorder};
           }
         `}
   width: 100%;
   text-align: center;
   font-weight: bold;
-  font-size: 17px;
-  letter-spacing: 0.05rem;
-  color: #242a2f;
+  font-size: ${({ theme }) => theme.fontSizes.medium};
 
   > a {
     display: block;

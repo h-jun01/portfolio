@@ -1,6 +1,7 @@
 import { objectType } from "@nexus/schema";
+import { NexusObjectTypeDef } from "@nexus/schema/dist/core";
 
-export const Profile = objectType({
+export const Profile: NexusObjectTypeDef<"Profile"> = objectType({
   name: "Profile",
   definition(t) {
     t.string("japaneseName");

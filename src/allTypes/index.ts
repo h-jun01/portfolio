@@ -1,7 +1,8 @@
 import { decorateType } from "@nexus/schema";
-import { GraphQLDate, GraphQLURL } from "graphql-scalars";
+import { GraphQLURL } from "graphql-scalars";
+import { GraphQLScalarType } from "graphql";
 
-export const GQLURL = decorateType(GraphQLURL, {
+export const GQLURL: GraphQLScalarType = decorateType(GraphQLURL, {
   rootTyping: "URL",
   asNexusMethod: "url",
 });
