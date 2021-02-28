@@ -75,7 +75,7 @@ const HeaderProfile = styled.div`
   > p {
     font-weight: bold;
     font-size: ${({ theme }) => theme.fontSizes.small};
-    color: #999999;
+    color: ${({ theme }) => theme.colors.scaleGray2};
   }
 `;
 

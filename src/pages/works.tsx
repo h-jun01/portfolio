@@ -28,7 +28,7 @@ const Page: NextPage = () => {
   if (loading) return <span>loading...</span>;
 
   return (
-    <div>
+    <main>
       <pre>{JSON.stringify(data, null, 2)}</pre>
       {works.map((work: Works, index: number) => (
         <div key={index}>
@@ -41,7 +41,7 @@ const Page: NextPage = () => {
           <p>{work.link}</p>
         </div>
       ))}
-    </div>
+    </main>
   );
 };
 

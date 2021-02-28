@@ -24,12 +24,12 @@ const Page: NextPage = () => {
   if (loading) return <span>loading...</span>;
 
   return (
-    <div>
+    <main>
       <pre>{JSON.stringify(data, null, 2)}</pre>
       {skills.map((skill: Skills, index: number) => (
         <p key={index}>{skill.lang}</p>
       ))}
-    </div>
+    </main>
   );
 };
 

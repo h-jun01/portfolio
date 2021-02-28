@@ -8,6 +8,7 @@ import {
 import { initializeApollo } from "src/apollo";
 import { NextPage, GetStaticProps } from "next";
 import { PageSEO } from "src/components/PageSEO";
+import { ContentWrapper } from "src/components/ContentWrapper";
 
 const query: DocumentNode = gql`
   query {
@@ -26,19 +27,21 @@ const Page: NextPage = () => {
   if (loading) return <span>loading...</span>;
 
   return (
-    <div>
-      <PageSEO
-        title="JunHashimoto | Profile"
-        path="/"
-        removeSiteNameFromTitle={true}
-      />
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-      <div>
-        <h1>{profile.japaneseName}</h1>
-        <p>{profile.englishName}</p>
-        <p>{profile.github}</p>
-      </div>
-    </div>
+    <main>
+      <ContentWrapper>
+        <PageSEO
+          title="JunHashimoto | Profile"
+          path="/"
+          removeSiteNameFromTitle={true}
+        />
+        <pre>{JSON.stringify(data, null, 2)}</pre>
+        <div>
+          <h1>{profile.japaneseName}</h1>
+          <p>{profile.englishName}</p>
+          <p>{profile.github}</p>
+        </div>
+      </ContentWrapper>
+    </main>
   );
 };
 

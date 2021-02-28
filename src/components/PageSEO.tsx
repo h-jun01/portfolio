@@ -1,5 +1,6 @@
-import Head from "next/head";
+import { FC } from "react";
 import { config } from "@site.config";
+import Head from "next/head";
 
 type Props = {
   title: string;
@@ -10,7 +11,7 @@ type Props = {
   removeSiteNameFromTitle?: boolean;
 };
 
-export const PageSEO: React.FC<Props> = (props) => {
+export const PageSEO: FC<Props> = (props) => {
   const {
     path,
     title,

@@ -19,7 +19,7 @@ const Page: NextPage = () => {
   );
 };
 
-const Error = styled.section`
+const Error = styled.main`
   padding: 3rem 0;
   text-align: center;
 `;

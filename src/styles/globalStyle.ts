@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: ${({ theme }) => theme.fontSizes.medium};
     ${mediaQuery.phone`
       font-size: ${({ theme }) => theme.fontSizes.small};
-      `}
+    `}
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     line-height: 1.7;
@@ -28,6 +28,16 @@ export const GlobalStyle = createGlobalStyle`
     word-wrap: break-word;
     font-family: "Inter", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN",
       "Hiragino Sans", Meiryo, sans-serif;
+  }
+
+  #__next {
+    display: flex; 
+    flex-flow: column; 
+    min-height: 100vh; 
+  }
+
+  main {
+    flex: 1; 
   }
 
   img {
