@@ -11,8 +11,10 @@ export const theme = {
     xxlarge: "32px",
   },
   colors: {
-    baseText: "#242a2f",
-    baseBackground: "#fff",
+    scaleBlack: "#242a2f",
+    scaleWhite: "#fff",
+    scaleGray1: "rgba(212, 231, 241, 0.9)",
+    scalePurple1: "#9060ff",
     activeBorder: "#f8826c",
     inactiveBorder: "#d1d5da",
   },

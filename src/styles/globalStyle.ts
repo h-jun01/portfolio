@@ -22,8 +22,8 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    color: ${({ theme }) => theme.colors.baseText};
-    background: ${({ theme }) => theme.colors.baseBackground};
+    color: ${({ theme }) => theme.colors.scaleBlack};
+    background: ${({ theme }) => theme.colors.scaleWhite};
     word-break: break-word;
     word-wrap: break-word;
     font-family: "Inter", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN",

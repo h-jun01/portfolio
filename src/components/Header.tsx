@@ -55,7 +55,7 @@ const HeaderUserImageContainer = styled.div`
 const HeaderUserImage = styled.img`
   height: 120px;
   width: 120px;
-  border: 5px solid #fff;
+  border: 5px solid ${({ theme }) => theme.colors.scaleWhite};
   border-radius: 60px;
   object-fit: cover;
 `;
