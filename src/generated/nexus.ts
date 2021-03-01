@@ -68,11 +68,11 @@ export interface NexusGenFieldTypes {
     lang: string | null; // String
   }
   Works: { // field return type
-    content: string | null; // String
     date: string | null; // String
+    imagePath: string | null; // String
     langs: Array<string | null> | null; // [String]
-    link: string | null; // String
     title: string | null; // String
+    url: string | null; // String
   }
 }
 

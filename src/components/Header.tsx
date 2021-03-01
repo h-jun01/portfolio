@@ -6,10 +6,10 @@ import styled from "styled-components";
 
 export const SiteHeader: FC = () => {
   return (
-    <header>
+    <HeaderContainer>
       <HeaderBackground />
       <ContentWrapper>
-        <HeaderContainer>
+        <HeaderItemContainer>
           <HeaderUserImageContainer>
             <HeaderUserImage src="./images/icon.png" alt="icon" />
           </HeaderUserImageContainer>
@@ -27,19 +27,23 @@ export const SiteHeader: FC = () => {
               </ul>
             </HeaderNavigation>
           </HeaderNavigationContainer>
-        </HeaderContainer>
+        </HeaderItemContainer>
       </ContentWrapper>
-    </header>
+    </HeaderContainer>
   );
 };
+
+const HeaderContainer = styled.header`
+  margin-bottom: 3rem;
+`;
 
 const HeaderBackground = styled.div`
   height: 190px;
   width: 100vw;
-  background-color: #242a2f;
+  background-color: ${({ theme }) => theme.colors.scaleBlack};
 `;
 
-const HeaderContainer = styled.div`
+const HeaderItemContainer = styled.div`
   position: relative;
   width: 100%;
 `;

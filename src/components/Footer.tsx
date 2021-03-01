@@ -18,7 +18,7 @@ export const Footer: FC = () => {
 };
 
 const FooterContainer = styled.footer`
-  margin-top: 5rem;
+  margin-top: 3rem;
   margin-bottom: 2rem;
 `;
 

@@ -25,9 +25,9 @@ A field whose value conforms to the standard URL format as specified in RFC3986:
 scalar URL
 
 type Works {
-  content: String
   date: String
+  imagePath: String
   langs: [String]
-  link: String
   title: String
+  url: String
 }

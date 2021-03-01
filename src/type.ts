@@ -8,9 +8,9 @@ export type Profile = {
 export type Works = {
   title: string;
   langs: string[];
-  link: string;
+  url: string;
+  imagePath: string;
   date: string;
-  content: string;
 };
 
 export type Skills = {

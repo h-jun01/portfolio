@@ -6,8 +6,8 @@ export const Works: NexusObjectTypeDef<"Works"> = objectType({
   definition(t) {
     t.string("title");
     t.list.string("langs");
-    t.string("link");
+    t.string("url");
+    t.string("imagePath");
     t.string("date");
-    t.string("content");
   },
 });

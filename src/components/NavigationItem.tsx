@@ -28,6 +28,7 @@ const NavigationItemList = styled.li<{ isActive: boolean }>`
           border-bottom: 2px solid ${({ theme }) => theme.colors.activeBorder};
         `
       : css`
+          color: ${({ theme }) => theme.colors.scaleGray4};
           border-bottom: 2px solid transparent;
           transition: border-bottom 0.1s;
           &:hover {

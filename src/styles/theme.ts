@@ -16,6 +16,8 @@ export const theme = {
     scaleGray1: "rgba(212, 231, 241, 0.9)",
     scaleGray2: "#999",
     scaleGray3: "#e4e4e4",
+    scaleGray4: "#666",
+    scaleGray5: "#a7a7a7",
     scalePurple1: "#9060ff",
     activeBorder: "#f8826c",
     inactiveBorder: "#d1d5da",
