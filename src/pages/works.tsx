@@ -10,6 +10,7 @@ import { NextPage, GetStaticProps } from "next";
 import { Works } from "src/type";
 import { PageSEO } from "src/components/PageSEO";
 import { ContentWrapper } from "src/components/ContentWrapper";
+import { mediaQuery } from "src/styles/mediaQuery";
 import styled, { css } from "styled-components";
 
 const query: DocumentNode = gql`
@@ -98,6 +99,12 @@ const CardImageFrame = styled.div<{ imagePath: string }>`
       background: url(${imagePath}) no-repeat center;
     `}
   background-size: cover;
+  ${mediaQuery.tablet`
+    padding-top: 50%;
+  `}
+  ${mediaQuery.phone`
+    padding-top: 50%;
+  `}
 `;
 
 const CardTextBox = styled.div`

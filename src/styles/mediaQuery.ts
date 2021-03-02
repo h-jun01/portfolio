@@ -12,8 +12,8 @@ type Breakpoints = {
 };
 
 const breakpoints: Breakpoints = {
-  tablet: 768,
-  phone: 680,
+  tablet: 1024,
+  phone: 599,
 };
 
 export const mediaQuery = Object.keys(breakpoints).reduce((acc, label) => {

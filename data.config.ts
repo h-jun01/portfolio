@@ -1,9 +1,15 @@
 export const data = {
   profile: {
-    japaneseName: "橋本 准",
-    englishName: "jun hashimoto",
     github: "https://github.com/h-jun01",
-    selfIntroduction: "hoge",
+    address: "jyun.0110@icloud.com",
+    selfIntroduction: ["- 橋本准", "- HAL東京WEB開発学科"],
+    interest: [
+      "- フロントエンド",
+      "- バックエンド",
+      "- ios/android",
+      "- UI/UX",
+    ],
+    hobby: ["- ラーメン", "- 散歩"],
   },
   works: [
     {
@@ -92,25 +98,25 @@ export const data = {
       item: "framework",
       lang: "TypeScript",
       imagePath: "./icons/typescript.png",
-      level: 80,
+      level: 75,
     },
     {
       item: "framework",
       lang: "React",
       imagePath: "./icons/react.png",
-      level: 80,
+      level: 75,
     },
     {
       item: "framework",
       lang: "ReactNative",
       imagePath: "./icons/reactnative.png",
-      level: 80,
+      level: 75,
     },
     {
       item: "framework",
       lang: "Next.js",
       imagePath: "./icons/next.png",
-      level: 80,
+      level: 75,
     },
     {
       item: "framework",

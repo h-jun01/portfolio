@@ -54,10 +54,11 @@ export interface NexusGenAllTypes extends NexusGenRootTypes {
 
 export interface NexusGenFieldTypes {
   Profile: { // field return type
-    englishName: string | null; // String
+    address: string | null; // String
     github: NexusGenScalars['URL'] | null; // URL
-    japaneseName: string | null; // String
-    selfIntroduction: string | null; // String
+    hobby: Array<string | null> | null; // [String]
+    interest: Array<string | null> | null; // [String]
+    selfIntroduction: Array<string | null> | null; // [String]
   }
   Query: { // field return type
     profile: NexusGenRootTypes['Profile'] | null; // Profile

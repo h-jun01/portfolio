@@ -7,8 +7,10 @@ export const theme = {
     small: "14px",
     medium: "16px",
     large: "18px",
-    xlarge: "24px",
-    xxlarge: "32px",
+    xlarge: "20px",
+    xxlarge: "22px",
+    xxxlarge: "24px",
+    xxxxlarge: "26px",
   },
   colors: {
     scaleBlack: "#242a2f",

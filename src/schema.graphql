@@ -3,10 +3,11 @@
 
 
 type Profile {
-  englishName: String
+  address: String
   github: URL
-  japaneseName: String
-  selfIntroduction: String
+  hobby: [String]
+  interest: [String]
+  selfIntroduction: [String]
 }
 
 type Query {
