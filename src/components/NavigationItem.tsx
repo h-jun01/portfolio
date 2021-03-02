@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { useRouter, NextRouter } from "next/router";
+import { mediaQuery } from "src/styles/mediaQuery";
 import styled, { css } from "styled-components";
 import Link from "next/link";
 
@@ -40,6 +41,9 @@ const NavigationItemList = styled.li<{ isActive: boolean }>`
   text-align: center;
   font-weight: bold;
   font-size: ${({ theme }) => theme.fontSizes.xlarge};
+  ${mediaQuery.phone`
+    font-size: ${({ theme }) => theme.fontSizes.large};
+  `}
 
   > a {
     display: block;

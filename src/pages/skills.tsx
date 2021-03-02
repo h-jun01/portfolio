@@ -81,6 +81,14 @@ const CardContainer = styled.article`
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   grid-auto-rows: 1fr;
   grid-gap: 2em;
+  ${mediaQuery.tablet`
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-gap: 1.5em;
+  `}
+  ${mediaQuery.phone`
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    grid-gap: 1em;
+  `}
 `;
 
 const Card = styled.section`
@@ -94,11 +102,17 @@ const CardCircularProgressFrame = styled.div`
   width: 100%;
   height: auto;
   padding: 20px 30px;
+  ${mediaQuery.phone`
+    padding: 15px 25px;
+  `}
 `;
 
 const CardLangImage = styled.img`
   width: 65%;
   padding: 20px;
+  ${mediaQuery.phone`
+    padding: 15px;
+  `}
 `;
 
 const CardTextBox = styled.div`
@@ -113,6 +127,9 @@ const CardTitleText = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.medium};
   text-align: center;
   margin: 20px 0;
+  ${mediaQuery.phone`
+    margin: 13px 0;
+  `}
 `;
 
 export default Page;

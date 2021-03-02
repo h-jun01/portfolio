@@ -1,8 +1,7 @@
 export const data = {
   profile: {
-    japaneseName: "橋本 准",
-    englishName: "jun hashimoto",
     github: "https://github.com/h-jun01",
+    address: "jyun.0110@icloud.com",
     selfIntroduction: ["- 橋本准", "- HAL東京WEB開発学科"],
     interest: [
       "- フロントエンド",

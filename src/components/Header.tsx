@@ -2,6 +2,7 @@ import { FC } from "react";
 import { ContentWrapper } from "src/components/ContentWrapper";
 import { NavigationItem } from "src/components/NavigationItem";
 import { config } from "@site.config";
+import { mediaQuery } from "src/styles/mediaQuery";
 import styled from "styled-components";
 
 export const SiteHeader: FC = () => {
@@ -23,7 +24,6 @@ export const SiteHeader: FC = () => {
                 <NavigationItem pathName="/" menuName="🧑🏻‍💻 Profile" />
                 <NavigationItem pathName="/works" menuName="📙 Works" />
                 <NavigationItem pathName="/skills" menuName="💻 Skills" />
-                <NavigationItem pathName="/contact" menuName="📨 Contact" />
               </ul>
             </HeaderNavigation>
           </HeaderNavigationContainer>
@@ -34,7 +34,6 @@ export const SiteHeader: FC = () => {
 };
 
 const imageSize = 130;
-const halfImage = imageSize / 2;
 
 const HeaderContainer = styled.header`
   margin-bottom: 3rem;
@@ -53,25 +52,48 @@ const HeaderItemContainer = styled.div`
 
 const HeaderUserImageContainer = styled.div`
   position: absolute;
-  top: -${halfImage}px;
+  top: -65px;
   left: 0;
   height: ${imageSize}px;
   width: ${imageSize}px;
+  ${mediaQuery.tablet`
+    left: 50%;
+    transform:translateX(-50%);
+  `}
+  ${mediaQuery.phone`
+    left: 50%;
+    transform:translateX(-50%);
+    height: ${imageSize - 5}px;
+    width: ${imageSize - 5}px;
+  `}
 `;
 
 const HeaderUserImage = styled.img`
   height: ${imageSize}px;
   width: ${imageSize}px;
   border: 6px solid ${({ theme }) => theme.colors.scaleWhite};
-  border-radius: ${halfImage}px;
+  border-radius: 180px;
   object-fit: cover;
+  ${mediaQuery.phone`
+    height: ${imageSize - 5}px;
+    width: ${imageSize - 5}px;
+    border-radius: 180px;
+  `}
 `;
 
 const HeaderNavigationContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 70px;
+  padding-top: 65px;
+  ${mediaQuery.tablet`
+    display: block;
+    text-align: center;
+  `}
+  ${mediaQuery.phone`
+    display: block;
+    text-align: center;
+  `}
 `;
 
 const HeaderProfile = styled.div`
@@ -91,5 +113,13 @@ const HeaderNavigation = styled.nav`
     display: flex;
     justify-content: space-between;
     width: 500px;
+    ${mediaQuery.tablet`
+      width: 100%;
+      margin-top: 1.5rem;
+    `}
+    ${mediaQuery.phone`
+      width: 100%;
+      margin-top: 1.5rem;
+    `}
   }
 `;

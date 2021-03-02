@@ -1,6 +1,5 @@
 export type Profile = {
-  japaneseName: string;
-  englishName: string;
+  address: string;
   github: string;
   selfIntroduction: string[];
   interest: string[];

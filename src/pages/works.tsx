@@ -102,6 +102,9 @@ const CardImageFrame = styled.div<{ imagePath: string }>`
   ${mediaQuery.tablet`
     padding-top: 50%;
   `}
+  ${mediaQuery.phone`
+    padding-top: 50%;
+  `}
 `;
 
 const CardTextBox = styled.div`

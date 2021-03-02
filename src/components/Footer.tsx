@@ -1,5 +1,6 @@
 import { FC, useMemo } from "react";
 import { ContentWrapper } from "src/components/ContentWrapper";
+import { mediaQuery } from "src/styles/mediaQuery";
 import styled from "styled-components";
 
 export const Footer: FC = () => {
@@ -29,4 +30,7 @@ const Copyright = styled.small`
   color: ${({ theme }) => theme.colors.scaleGray3};
   text-align: center;
   letter-spacing: 0.1rem;
+  ${mediaQuery.phone`
+    font-size: ${({ theme }) => theme.fontSizes.medium};
+  `}
 `;

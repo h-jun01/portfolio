@@ -15,8 +15,7 @@ import styled from "styled-components";
 const query: DocumentNode = gql`
   query {
     profile {
-      japaneseName
-      englishName
+      address
       github
       selfIntroduction
       interest
@@ -43,21 +42,21 @@ const Page: NextPage = () => {
         <ProfileItemContainer>
           <ProfileHeading>🧑🏻‍💻 Profile</ProfileHeading>
           {profile.selfIntroduction.map((item: string, index: number) => (
-            <SelfIntroduction key={index}>{item}</SelfIntroduction>
+            <ProfileSectionItem key={index}>{item}</ProfileSectionItem>
           ))}
         </ProfileItemContainer>
         {/* Interest */}
         <ProfileItemContainer>
           <ProfileHeading>🤔 Interest</ProfileHeading>
           {profile.interest.map((item: string, index: number) => (
-            <SelfIntroduction key={index}>{item}</SelfIntroduction>
+            <ProfileSectionItem key={index}>{item}</ProfileSectionItem>
           ))}
         </ProfileItemContainer>
         {/* Hobby */}
         <ProfileItemContainer>
           <ProfileHeading>😆 Hobby</ProfileHeading>
           {profile.hobby.map((item: string, index: number) => (
-            <SelfIntroduction key={index}>{item}</SelfIntroduction>
+            <ProfileSectionItem key={index}>{item}</ProfileSectionItem>
           ))}
         </ProfileItemContainer>
         {/* SNS */}
@@ -68,6 +67,12 @@ const Page: NextPage = () => {
             <SNSicon imagePath="./icons/insta.png" altText="insta" />
             <SNSicon imagePath="./icons/github.png" altText="github" />
           </IconContainer>
+        </ProfileItemContainer>
+        {/* Contact */}
+        <ProfileItemContainer>
+          <ProfileHeading>📨 Contact</ProfileHeading>
+          <ContactText>お問い合わせはこちら</ContactText>
+          <ContactText>{profile.address}</ContactText>
         </ProfileItemContainer>
       </ContentWrapper>
     </main>
@@ -97,7 +102,12 @@ const ProfileHeading = styled.h2`
   margin-bottom: 0.7rem;
 `;
 
-const SelfIntroduction = styled.p`
+const ProfileSectionItem = styled.p`
+  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-weight: bold;
+`;
+
+const ContactText = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.medium};
   font-weight: bold;
 `;
