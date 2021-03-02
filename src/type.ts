@@ -2,7 +2,9 @@ export type Profile = {
   japaneseName: string;
   englishName: string;
   github: string;
-  selfIntroduction: string;
+  selfIntroduction: string[];
+  interest: string[];
+  hobby: string[];
 };
 
 export type Works = {

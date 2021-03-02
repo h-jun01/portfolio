@@ -39,7 +39,7 @@ const NavigationItemList = styled.li<{ isActive: boolean }>`
   width: 100%;
   text-align: center;
   font-weight: bold;
-  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-size: ${({ theme }) => theme.fontSizes.xlarge};
 
   > a {
     display: block;

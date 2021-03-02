@@ -33,6 +33,9 @@ export const SiteHeader: FC = () => {
   );
 };
 
+const imageSize = 130;
+const halfImage = imageSize / 2;
+
 const HeaderContainer = styled.header`
   margin-bottom: 3rem;
 `;
@@ -50,17 +53,17 @@ const HeaderItemContainer = styled.div`
 
 const HeaderUserImageContainer = styled.div`
   position: absolute;
-  top: -60px;
+  top: -${halfImage}px;
   left: 0;
-  height: 120px;
-  width: 120px;
+  height: ${imageSize}px;
+  width: ${imageSize}px;
 `;
 
 const HeaderUserImage = styled.img`
-  height: 120px;
-  width: 120px;
-  border: 5px solid ${({ theme }) => theme.colors.scaleWhite};
-  border-radius: 60px;
+  height: ${imageSize}px;
+  width: ${imageSize}px;
+  border: 6px solid ${({ theme }) => theme.colors.scaleWhite};
+  border-radius: ${halfImage}px;
   object-fit: cover;
 `;
 
@@ -68,17 +71,17 @@ const HeaderNavigationContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 60px;
+  padding-top: 70px;
 `;
 
 const HeaderProfile = styled.div`
   > h1 {
-    font-size: ${({ theme }) => theme.fontSizes.xlarge};
+    font-size: ${({ theme }) => theme.fontSizes.xxxlarge};
   }
 
   > p {
     font-weight: bold;
-    font-size: ${({ theme }) => theme.fontSizes.small};
+    font-size: ${({ theme }) => theme.fontSizes.large};
     color: ${({ theme }) => theme.colors.scaleGray2};
   }
 `;
@@ -87,6 +90,6 @@ const HeaderNavigation = styled.nav`
   > ul {
     display: flex;
     justify-content: space-between;
-    width: 420px;
+    width: 500px;
   }
 `;

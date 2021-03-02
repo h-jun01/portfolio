@@ -7,6 +7,8 @@ export const Profile: NexusObjectTypeDef<"Profile"> = objectType({
     t.string("japaneseName");
     t.string("englishName");
     t.url("github", (profile) => new URL(profile.github));
-    t.string("selfIntroduction");
+    t.list.string("selfIntroduction");
+    t.list.string("interest");
+    t.list.string("hobby");
   },
 });

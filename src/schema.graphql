@@ -5,8 +5,10 @@
 type Profile {
   englishName: String
   github: URL
+  hobby: [String]
+  interest: [String]
   japaneseName: String
-  selfIntroduction: String
+  selfIntroduction: [String]
 }
 
 type Query {

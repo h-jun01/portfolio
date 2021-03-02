@@ -8,9 +8,11 @@ import {
 import { initializeApollo } from "src/apollo";
 import { NextPage, GetStaticProps } from "next";
 import { ContentWrapper } from "src/components/ContentWrapper";
+import { PageSEO } from "src/components/PageSEO";
 import { Skills } from "src/type";
-import styled from "styled-components";
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
+import { mediaQuery } from "src/styles/mediaQuery";
+import styled from "styled-components";
 import "react-circular-progressbar/dist/styles.css";
 
 const query: DocumentNode = gql`
@@ -32,6 +34,11 @@ const Page: NextPage = () => {
 
   return (
     <main>
+      <PageSEO
+        title="JunHashimoto | Skill"
+        path="/skill"
+        removeSiteNameFromTitle={true}
+      />
       <ContentWrapper>
         <CardContainer>
           {skills.map((skill: Skills, index: number) => (
@@ -73,7 +80,7 @@ const CardContainer = styled.article`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   grid-auto-rows: 1fr;
-  grid-gap: 1.7em;
+  grid-gap: 2em;
 `;
 
 const Card = styled.section`

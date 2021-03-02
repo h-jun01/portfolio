@@ -7,7 +7,6 @@ type Props = {
   path?: string;
   description?: string;
   ogImageUrl?: string;
-  noindex?: boolean;
   removeSiteNameFromTitle?: boolean;
 };
 
@@ -17,7 +16,6 @@ export const PageSEO: FC<Props> = (props) => {
     title,
     description,
     ogImageUrl,
-    noindex,
     removeSiteNameFromTitle,
   } = props;
 
@@ -40,6 +38,7 @@ export const PageSEO: FC<Props> = (props) => {
       <meta property="og:url" content={pageUrl} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="og:site" content={config.siteMeta.title} />
+      <meta name="keywords" content="jun,junhashimoto,portfolio" />
       <meta
         property="og:image"
         content={ogImageUrl || `${config.siteRoot}/og.png`}
@@ -51,7 +50,6 @@ export const PageSEO: FC<Props> = (props) => {
         </>
       )}
       {path && <link rel="canonical" href={pageUrl} />}
-      {noindex && <meta name="robots" content="noindex" />}
     </Head>
   );
 };

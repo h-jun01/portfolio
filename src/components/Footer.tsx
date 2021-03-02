@@ -25,7 +25,7 @@ const FooterContainer = styled.footer`
 const Copyright = styled.small`
   display: block;
   font-weight: bold;
-  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-size: ${({ theme }) => theme.fontSizes.large};
   color: ${({ theme }) => theme.colors.scaleGray3};
   text-align: center;
   letter-spacing: 0.1rem;
