@@ -1,11 +1,16 @@
-export const ContentWrapper: React.FC<{ children: React.ReactNode }> = (
-  props
-) => {
-  return <div className="content-wrapper">{props.children}</div>;
+import { FC, ReactNode } from "react";
+import styled from "styled-components";
+
+type Props = {
+  children: ReactNode;
 };
 
-export const UndoWrapForScroll: React.FC<{
-  children: React.ReactNode;
-}> = (props) => {
-  return <div className="undo-wrap-for-scroll">{props.children}</div>;
+export const ContentWrapper: FC<Props> = ({ children }) => {
+  return <Wrapper>{children}</Wrapper>;
 };
+
+const Wrapper = styled.div`
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 2rem;
+`;

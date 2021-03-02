@@ -65,14 +65,17 @@ export interface NexusGenFieldTypes {
     works: Array<NexusGenRootTypes['Works'] | null> | null; // [Works]
   }
   Skills: { // field return type
+    imagePath: string | null; // String
+    item: string | null; // String
     lang: string | null; // String
+    level: number | null; // Int
   }
   Works: { // field return type
-    content: string | null; // String
     date: string | null; // String
+    imagePath: string | null; // String
     langs: Array<string | null> | null; // [String]
-    links: Array<string | null> | null; // [String]
     title: string | null; // String
+    url: string | null; // String
   }
 }
 

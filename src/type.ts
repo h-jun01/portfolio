@@ -8,11 +8,14 @@ export type Profile = {
 export type Works = {
   title: string;
   langs: string[];
-  links: string[];
+  url: string;
+  imagePath: string;
   date: string;
-  content: string;
 };
 
 export type Skills = {
+  item: string;
   lang: string;
+  imagePath: string;
+  level: number;
 };

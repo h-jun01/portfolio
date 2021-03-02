@@ -1,12 +1,13 @@
 import { objectType } from "@nexus/schema";
+import { NexusObjectTypeDef } from "@nexus/schema/dist/core";
 
-export const Works = objectType({
+export const Works: NexusObjectTypeDef<"Works"> = objectType({
   name: "Works",
   definition(t) {
     t.string("title");
     t.list.string("langs");
-    t.list.string("links");
+    t.string("url");
+    t.string("imagePath");
     t.string("date");
-    t.string("content");
   },
 });

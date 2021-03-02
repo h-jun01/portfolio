@@ -1,20 +1,31 @@
-import { createMuiTheme } from "@material-ui/core/styles";
-import red from "@material-ui/core/colors/red";
+import "styled-components";
 
-// Create a theme instance.
-export const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#556cd6",
-    },
-    secondary: {
-      main: "#19857b",
-    },
-    error: {
-      main: red.A400,
-    },
-    background: {
-      default: "#fff",
-    },
+export const theme = {
+  fontSizes: {
+    xxsmall: "10px",
+    xsmall: "12px",
+    small: "14px",
+    medium: "16px",
+    large: "18px",
+    xlarge: "24px",
+    xxlarge: "32px",
   },
-});
+  colors: {
+    scaleBlack: "#242a2f",
+    scaleWhite: "#fff",
+    scaleGray1: "rgba(212, 231, 241, 0.9)",
+    scaleGray2: "#999",
+    scaleGray3: "#e4e4e4",
+    scaleGray4: "#666",
+    scaleGray5: "#a7a7a7",
+    scalePurple1: "#9060ff",
+    activeBorder: "#f8826c",
+    inactiveBorder: "#d1d5da",
+  },
+} as const;
+
+type AppTheme = typeof theme;
+
+declare module "styled-components" {
+  interface DefaultTheme extends AppTheme {}
+}
