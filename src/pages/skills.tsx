@@ -41,7 +41,7 @@ const Page: NextPage = () => {
                   value={skill.level}
                   strokeWidth={6}
                 >
-                  <CardLangImage src={skill.imagePath} alt="aa" />
+                  <CardLangImage src={skill.imagePath} alt="logo" />
                 </CircularProgressbarWithChildren>
               </CardCircularProgressFrame>
               <CardTextBox>
@@ -71,7 +71,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const CardContainer = styled.article`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   grid-auto-rows: 1fr;
   grid-gap: 1.7em;
 `;
@@ -90,7 +90,7 @@ const CardCircularProgressFrame = styled.div`
 `;
 
 const CardLangImage = styled.img`
-  width: 80%;
+  width: 65%;
   padding: 20px;
 `;
 

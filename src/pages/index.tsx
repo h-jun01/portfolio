@@ -28,18 +28,14 @@ const Page: NextPage = () => {
 
   return (
     <main>
+      <PageSEO
+        title="JunHashimoto | Profile"
+        path="/"
+        removeSiteNameFromTitle={true}
+      />
       <ContentWrapper>
-        <PageSEO
-          title="JunHashimoto | Profile"
-          path="/"
-          removeSiteNameFromTitle={true}
-        />
-        <pre>{JSON.stringify(data, null, 2)}</pre>
-        <div>
-          <h1>{profile.japaneseName}</h1>
-          <p>{profile.englishName}</p>
-          <p>{profile.github}</p>
-        </div>
+        <h3>🧑🏻‍💻 Profile</h3>
+        <h3>📣 SNS</h3>
       </ContentWrapper>
     </main>
   );

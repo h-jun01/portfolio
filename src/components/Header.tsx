@@ -40,7 +40,7 @@ const HeaderContainer = styled.header`
 const HeaderBackground = styled.div`
   height: 190px;
   width: 100vw;
-  background-color: ${({ theme }) => theme.colors.scaleBlack};
+  background-color: #242a2f;
 `;
 
 const HeaderItemContainer = styled.div`
