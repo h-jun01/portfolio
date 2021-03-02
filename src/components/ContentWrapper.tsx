@@ -10,7 +10,7 @@ export const ContentWrapper: FC<Props> = ({ children }) => {
 };
 
 const Wrapper = styled.div`
-  max-width: 960px;
+  max-width: 980px;
   margin: 0 auto;
-  padding: 0 1.3rem;
+  padding: 0 2rem;
 `;

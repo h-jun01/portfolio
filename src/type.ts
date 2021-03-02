@@ -14,5 +14,8 @@ export type Works = {
 };
 
 export type Skills = {
+  item: string;
   lang: string;
+  imagePath: string;
+  level: number;
 };

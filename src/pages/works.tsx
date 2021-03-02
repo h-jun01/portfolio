@@ -77,9 +77,9 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const CardContainer = styled.article`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
   grid-auto-rows: 1fr;
-  grid-gap: 1.1em;
+  grid-gap: 1.7em;
 `;
 
 const Card = styled.section`
@@ -116,8 +116,8 @@ const CardDateTest = styled.span`
 `;
 
 const CardTitleText = styled.h3`
-  font-size: ${({ theme }) => theme.fontSizes.large};
   font-weight: bold;
+  font-size: ${({ theme }) => theme.fontSizes.large};
 `;
 
 const CardOverviewText = styled.div`

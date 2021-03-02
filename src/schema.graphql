@@ -16,7 +16,10 @@ type Query {
 }
 
 type Skills {
+  imagePath: String
+  item: String
   lang: String
+  level: Int
 }
 
 """
