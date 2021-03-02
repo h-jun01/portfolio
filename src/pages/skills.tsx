@@ -122,7 +122,7 @@ const CardTextBox = styled.div`
   border-top: 2px solid ${({ theme }) => theme.colors.scaleGray3};
 `;
 
-const CardTitleText = styled.h3`
+const CardTitleText = styled.h2`
   font-weight: bold;
   font-size: ${({ theme }) => theme.fontSizes.medium};
   text-align: center;

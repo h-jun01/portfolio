@@ -39,7 +39,7 @@ export const data = {
       ],
       url:
         "https://play.google.com/store/apps/details?id=com.myapp.yakei&hl=ja&gl=JP",
-      imagePath: "./images/yakei.jpg",
+      imagePath: "./images/yakei.png",
       date: "2020.09",
     },
     {
@@ -55,21 +55,21 @@ export const data = {
         "Firebase",
       ],
       url: "https://github.com/h-jun01/Funfiction",
-      imagePath: "./images/funfiction.jpg",
+      imagePath: "./images/funfiction.png",
       date: "2020.03",
     },
     {
       title: "b-unlock",
       langs: ["Node.js", "SCSS", "PWA", "WebAuthn", "Raspberry Pi", "Heroku"],
       url: "https://youtu.be/Oft-5r43k7o?t=1815",
-      imagePath: "./images/b_unlock.jpg",
+      imagePath: "./images/b_unlock.png",
       date: "2019.08",
     },
     {
       title: "webAR",
       langs: ["jQuery", "three.js", "AR.js", "PHP", "MySQL", "Docker"],
       url: "https://github.com/h-jun01/webAR",
-      imagePath: "./images/webar.jpg",
+      imagePath: "./images/webar.png",
       date: "2019.03",
     },
   ],
