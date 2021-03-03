@@ -111,7 +111,8 @@ const CardLangImage = styled.img`
   width: 65%;
   padding: 20px;
   ${mediaQuery.phone`
-    padding: 15px;
+    width: 35%;
+    padding: 0;
   `}
 `;
 
