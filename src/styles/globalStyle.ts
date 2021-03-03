@@ -11,13 +11,14 @@ export const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: ${({ theme }) => theme.fontSizes.medium};
-    ${mediaQuery.phone`
-      font-size: ${({ theme }) => theme.fontSizes.small};
-    `}
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     line-height: 1.7;
     letter-spacing:0.05rem;
+    ${mediaQuery.phone`
+      font-size: ${({ theme }) => theme.fontSizes.small};
+      letter-spacing:0.03rem;
+    `}
   } 
 
   body {
